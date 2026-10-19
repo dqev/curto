@@ -1,10 +1,13 @@
 # Curto Serif
+A refined, contemporary serif typeface for editorial elegance, titles, and bold brand identities — by [Dev Chauhan](https://devchauhan.in).
 
 ![Curto Serif](docs/curto-serif-hero.png)
 
-A refined, contemporary serif typeface for editorial elegance, titles, and bold brand identities — by [Dev Chauhan](mailto:dev@devchauhan.in).
-
 ![Curto Serif Italic](docs/curto-serif-italic-hero.png)
+
+## Preview
+
+[**devchauhan.in/curto**](https://devchauhan.in/curto) — live specimen.
 
 ## Download
 
