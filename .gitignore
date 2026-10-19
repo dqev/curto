@@ -1,0 +1,5 @@
+.DS_Store
+*(Autosaved).glyphs
+__pycache__/
+*.pyc
+build/
