@@ -1,14 +1,43 @@
-# Curto Serif
-
+<p align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/curto-serif-hero-light.png">
   <source media="(prefers-color-scheme: light)" srcset="docs/curto-serif-hero-dark.png">
-  <img src="docs/curto-serif-hero-dark.png" alt="Curto Serif" width="1200">
+  <img src="docs/curto-serif-hero-dark.png" alt="Curto Serif" width="400">
 </picture>
+</p>
 
-A refined, contemporary serif typeface for editorial elegance, titles, and bold brand identities — by [Dev Chauhan](https://devchauhan.in).
+<p align="center">A refined, contemporary serif typeface for editorial elegance, titles, and bold brand identities.</p>
 
-[**Live specimen →**](https://devchauhan.in/curto)
+<p align="center">
+  <a href="https://devchauhan.in/curto">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/pill-live-light.svg">
+      <source media="(prefers-color-scheme: light)" srcset="docs/pill-live-dark.svg">
+      <img src="docs/pill-live-dark.svg" alt="Live" height="34">
+    </picture>
+  </a>
+  <a href="#download">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/pill-download-light.svg">
+      <source media="(prefers-color-scheme: light)" srcset="docs/pill-download-dark.svg">
+      <img src="docs/pill-download-dark.svg" alt="Download" height="34">
+    </picture>
+  </a>
+  <a href="https://github.com/dqev/curto/releases">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/pill-release-light.svg">
+      <source media="(prefers-color-scheme: light)" srcset="docs/pill-release-dark.svg">
+      <img src="docs/pill-release-dark.svg" alt="Release" height="34">
+    </picture>
+  </a>
+  <a href="https://github.com/dqev/curto/releases/tag/v1.001">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/pill-beta-light.svg">
+      <source media="(prefers-color-scheme: light)" srcset="docs/pill-beta-dark.svg">
+      <img src="docs/pill-beta-dark.svg" alt="Beta" height="34">
+    </picture>
+  </a>
+</p>
 
 ## Download
 
