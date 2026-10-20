@@ -1,23 +1,24 @@
 # Curto Serif
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/curto-serif-hero-light.png">
+  <source media="(prefers-color-scheme: light)" srcset="docs/curto-serif-hero-dark.png">
+  <img src="docs/curto-serif-hero-dark.png" alt="Curto Serif" width="1200">
+</picture>
+
 A refined, contemporary serif typeface for editorial elegance, titles, and bold brand identities — by [Dev Chauhan](https://devchauhan.in).
 
-![Curto Serif](docs/curto-serif-hero.png)
-
-![Curto Serif Italic](docs/curto-serif-italic-hero.png)
-
-## Preview
-
-[**devchauhan.in/curto**](https://devchauhan.in/curto) — live specimen.
+[**Live specimen →**](https://devchauhan.in/curto)
 
 ## Download
 
-[**⬇ CurtoSerif-1.000.zip**](CurtoSerif-1.000.zip) — OTF, TTF, and WOFF2 files with the `curto.css` stylesheet and the OFL license.
+- [**CurtoSerif-1.000.zip**](CurtoSerif-1.000.zip) — stable. Weight 400, Roman and Italic.
+- [**CurtoSerif-1.001-beta.zip**](https://github.com/dqev/curto/releases/tag/v1.001) — beta. Weights 400–700 plus variable fonts.
 
 ## Install
 
-**Desktop** — install the `.otf` (or `.ttf`) files from the zip.
-- macOS: double-click and choose *Install Font*.
-- Windows: right-click → *Install*.
+**Desktop** — install the `.otf` or `.ttf` files from the zip.
+macOS: double-click → *Install Font*. Windows: right-click → *Install*.
 
 **Web** — link the stylesheet:
 
@@ -27,10 +28,6 @@ A refined, contemporary serif typeface for editorial elegance, titles, and bold 
 <p style='font-family:"Curto Serif";font-style:italic'>Italic works too.</p>
 ```
 
-**Weight** — 400 (Regular), in Regular and Italic. No bold, no variable axis.
-
 ## License
 
-Licensed under the [SIL Open Font License 1.1](OFL.txt) — free to use, modify, and redistribute.
-
-Repository: https://github.com/dqev/curto.git
+[SIL Open Font License 1.1](OFL.txt) — free to use, modify, and redistribute.
