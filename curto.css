@@ -1,0 +1,36 @@
+/* Curto Serif — 400–700, Roman + Italic  ·  SIL Open Font License 1.1
+   https://github.com/dqev/curto
+   Static faces are listed first; the variable faces come last so capable
+   browsers prefer the single variable file. */
+
+@font-face { font-family: "Curto Serif"; src: url("fonts/webfonts/CurtoSerif-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Curto Serif"; src: url("fonts/webfonts/CurtoSerif-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+
+@font-face { font-family: "Curto Serif"; src: url("fonts/webfonts/CurtoSerif-Medium.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Curto Serif"; src: url("fonts/webfonts/CurtoSerif-MediumItalic.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; }
+
+@font-face { font-family: "Curto Serif"; src: url("fonts/webfonts/CurtoSerif-SemiBold.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Curto Serif"; src: url("fonts/webfonts/CurtoSerif-SemiBoldItalic.woff2") format("woff2"); font-weight: 600; font-style: italic; font-display: swap; }
+
+@font-face { font-family: "Curto Serif"; src: url("fonts/webfonts/CurtoSerif-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Curto Serif"; src: url("fonts/webfonts/CurtoSerif-BoldItalic.woff2") format("woff2"); font-weight: 700; font-style: italic; font-display: swap; }
+
+@font-face {
+  font-family: "Curto Serif";
+  src: url("fonts/webfonts/CurtoSerif[wght].woff2") format("woff2-variations");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Curto Serif";
+  src: url("fonts/webfonts/CurtoSerif-Italic[wght].woff2") format("woff2-variations");
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+.curto {
+  font-family: "Curto Serif", Georgia, serif;
+  line-height: 1.1;
+}

@@ -1,7 +1,43 @@
+*~
+venv
+venv-test
+build.stamp
+proof
+node_modules
+package-lock.json
+package.json
+master_ufo
+instance_ufos
+subset-files
+.ninja_log
+build.ninja
+build/
+.venv/
+.env
+
+# OS generated files #
+######################
 .DS_Store
-*(Autosaved).glyphs
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Python
 __pycache__/
 *.pyc
-build/
-.venv
-scripts/
+
+# Autosaved by font editors
+######################
+*(Autosaved).*
+*(automaticky ulozeno).*
+*(Automatisch gesichert).*
+*(guardado automaticamente).*
+*(enregistre automatiquement).*
+*(salvato automaticamente).*
+*(Salvo Automaticamente).*
+*(Autosave).*
+*(Автосохранение).*
+*(Otomatik Kaydedildi).*

@@ -1,8 +1,8 @@
-Copyright 2026 Dev Chauhan (https://github.com/dqev/curto)
+Copyright 2026 The Curto Serif Project Authors (https://github.com/dqev/curto)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
-https://scripts.sil.org/OFL
+https://openfontlicense.org
 
 
 -----------------------------------------------------------
