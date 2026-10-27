@@ -72,6 +72,22 @@ writes static TTF/OTF and variable TTF builds into `fonts/`, generates WOFF2
 webfonts, and applies the family naming, OS/2, and licensing metadata. The same
 sources can also be built with `gftools builder sources/config.yaml`.
 
+## Quality assurance
+
+`make test` runs Fontspector's Google Fonts profile. The current build has 0
+failures and 5 warnings, all expected:
+
+- `googlefonts/vendor_id` — the family uses `DQCU`, the project's own vendor
+  ID. The warning clears once the ID is registered with
+  [Microsoft](https://www.microsoft.com/typography/links/vendorlist.aspx).
+- `googlefonts/metadata/unreachable_subsetting` — a known Fontspector/gfsubsets
+  limitation. The flagged codepoints are required by the `shape_languages` and
+  `dotted_circle` checks, or are Latin Core extras; adding unrelated subsets
+  would misrepresent the family's coverage.
+- `outline_alignment_miss` — a heuristic false positive in the Italic. The
+  reported points are intentional overshoots near the baseline and cap-height;
+  the check itself notes that such points are often not mistakes.
+
 ## About
 
 Curto Serif is designed and maintained by Dev Chauhan. The project is fully

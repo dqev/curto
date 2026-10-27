@@ -117,6 +117,22 @@ def _add_unhinted_tables(font):
     font["prep"] = prep
 
 
+def _add_avar(font):
+    if "avar" in font:
+        return
+    avar = newTable("avar")
+    avar.segments = {"wght": {0.0: 0.0, 1.0: 1.0}}
+    font["avar"] = avar
+
+
+def _add_meta(font):
+    if "meta" in font:
+        return
+    meta = newTable("meta")
+    meta.data = {"dlng": "Latn", "slng": "Latn"}
+    font["meta"] = meta
+
+
 def _set_metadata(font, weight):
     os2 = font["OS/2"]
     os2.fsType = 0
@@ -134,7 +150,10 @@ def _set_metadata(font, weight):
     os2.sTypoLineGap = 0
     os2.usWinAscent = 936
     os2.usWinDescent = 282
-    os2.fsSelection |= 0x80
+    os2.fsSelection |= 0x180
+    if "fvar" in font:
+        _add_avar(font)
+    _add_meta(font)
     set_name(font, 0, COPYRIGHT)
     set_name(font, 13, LICENSE)
     set_name(font, 14, LICENSE_URL)
