@@ -2,8 +2,8 @@
 # Documentation: https://github.com/googlefonts/gftools/blob/main/Lib/gftools/builder/__init__.py
 
 sources:
-  - Curto.glyphs
-  - Curto_Italic.glyphs
+  - CurtoSerif.glyphs
+  - CurtoSerif-Italic.glyphs
 
 familyName: "Curto Serif"
 
@@ -21,7 +21,7 @@ includeSourceFixes: true
 flattenComponents: true
 decomposeTransformedComponents: true
 checkCompatibility: true
-overlaps: booleanOperations
+removeOutlineOverlaps: false
 
 stat:
   CurtoSerif[wght].ttf:

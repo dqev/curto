@@ -49,27 +49,23 @@ result can be interpolated:
   and descender;
 - sidebearings grow by `2a`, component offsets shift by `a`, anchors follow.
 
-Two build routes exist:
-
-1. **Sources / OTF** — `fontmake` interpolates the six masters in the Glyphs
-   source and compiles them.
-2. **TTF / variable** — the compiled 400 TTF is emboldened directly
-   (`scripts/embolden_ttf.py`) and `varLib` assembles the variable font. The
-   compiled route is required for the variable font because `fontmake`'s
-   per-instance cu2qu step re-splits curves differently at each weight, so the
-   interpolated static TTFs are not point-compatible with one another.
+The family builds from the four masters in the Glyphs sources with
+`gftools builder`. `fontmake` compiles the static TTF/OTF instances and
+assembles the variable font from the source masters.
+`sources/scripts/postprocess.py` applies naming and metadata and regenerates
+the WOFF2 files from the finished fonts.
 
 ## Rebuilding
 
 From the repository root:
 
 ```sh
-.venv/bin/python beta/scripts/build_family.py
+make build
 ```
 
-Writes the TTFs, variable fonts, OTFs and WOFF2 into `fonts/` (scratch files
-go to `build/`). `sources/scripts/make_sources.py` documents how the committed
-multi-master sources were generated from the original single-master sources.
+Writes the TTFs, variable fonts, OTFs and WOFF2 into `fonts/`.
+`sources/scripts/make_sources.py` documents how the committed multi-master
+sources were generated from the original single-master sources.
 
 ## License
 

@@ -61,32 +61,36 @@ Fonts are built automatically by GitHub Actions — check the **Actions** tab fo
 the latest build. To build locally:
 
 ```sh
-make build   # build fonts into fonts/
-make test    # run Fontspector QA checks
-make proof   # generate HTML proofs in out/proof/
+make build       # build fonts into fonts/
+make test        # run strict Fontspector QA checks
+make test-clean  # run QA with known non-defect warnings reclassified
+make proof       # generate HTML proofs in out/proof/
 ```
 
 `make build` creates an isolated `venv`, installs the pinned requirements, and
-runs the reproducible pipeline in `sources/scripts/build_family.py`. That script
-writes static TTF/OTF and variable TTF builds into `fonts/`, generates WOFF2
-webfonts, and applies the family naming, OS/2, and licensing metadata. The same
-sources can also be built with `gftools builder sources/config.yaml`.
+runs `gftools builder sources/config.yaml`. The builder compiles static TTF/OTF
+and variable TTF builds into `fonts/` and generates WOFF2 webfonts.
+`sources/scripts/postprocess.py` then applies the family naming, OS/2, and
+licensing metadata and regenerates the WOFF2 files from the finished fonts.
 
 ## Quality assurance
 
 `make test` runs Fontspector's Google Fonts profile. The current build has 0
-failures and 5 warnings, all expected:
+failures and four font-level warnings from two checks, all expected:
 
 - `googlefonts/vendor_id` — the family uses `DQCU`, the project's own vendor
   ID. The warning clears once the ID is registered with
   [Microsoft](https://www.microsoft.com/typography/links/vendorlist.aspx).
-- `googlefonts/metadata/unreachable_subsetting` — a known Fontspector/gfsubsets
-  limitation. The flagged codepoints are required by the `shape_languages` and
-  `dotted_circle` checks, or are Latin Core extras; adding unrelated subsets
-  would misrepresent the family's coverage.
-- `outline_alignment_miss` — a heuristic false positive in the Italic. The
-  reported points are intentional overshoots near the baseline and cap-height;
-  the check itself notes that such points are often not mistakes.
+- `googlefonts/metadata/unreachable_subsetting` — Fontspector 1.9.0 lists
+  several codepoints, but the warning cannot be cleared because `U+0328`,
+  `U+2028` and `U+2029` are in no Google Fonts subset. Those codepoints are
+  required by `shape_languages` and `separator_glyphs`; removing them would
+  create real failures. This is a Fontspector limitation, not a font defect.
+
+`make test-clean` runs the same profile with `fontspector-clean.toml`, which
+reclassifies only those known non-defects and writes a separate
+`out/fontspector/fontspector-report-clean.md`/`.html`. The strict `make test`
+report is left untouched.
 
 ## About
 
@@ -121,10 +125,10 @@ the [GitHub Releases page](https://github.com/dqev/curto/releases).
 ├── requirements.txt
 ├── scripts/
 └── sources/
-    ├── Curto.glyphs
-    ├── Curto_Italic.glyphs
+    ├── CurtoSerif.glyphs
+    ├── CurtoSerif-Italic.glyphs
     ├── config.yaml
-    └── scripts/          # reproducible build pipeline
+    └── scripts/          # source generation and post-processing
 ```
 
 ## License

@@ -1,7 +1,7 @@
-"""Expand a single-master Curto Glyphs source into the 400-900 multi-master one.
+"""Expand a single-master Curto Glyphs source into the 400-700 multi-master one.
 
-This produced the sources currently committed at ``src/sources/Curto.glyphs`` and
-``src/sources/Curto_Italic.glyphs``.  Kept for reproducibility: run it against a
+This produced the sources currently committed at ``sources/CurtoSerif.glyphs`` and
+``sources/CurtoSerif-Italic.glyphs``. Kept for reproducibility: run it against a
 checkout of the original single-master sources.
 
     python make_sources.py <single>.glyphs <multi>.glyphs [--italic] [--version 1.001]

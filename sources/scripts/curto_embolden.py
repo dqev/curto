@@ -15,8 +15,8 @@ which keeps the counters from closing up at Black.  A piecewise-linear vertical
 remap re-pins the baseline, x-height, cap-height and descender so the heavier
 weights keep the same alignment zones as the source.
 
-``add_weights`` expands a single-master Glyphs source into a 400-900 multi-master
-source; ``embolden_points`` is the primitive reused by the binary (TTF) builder.
+``add_weights`` expands a single-master Glyphs source into a 400-700 multi-master
+source; ``embolden_points`` is the primitive used for the generated masters.
 """
 
 import copy
@@ -238,11 +238,12 @@ def _master_metrics(font):
 
 
 def add_weights(font, is_italic=False):
-    """Expand ``font`` (single 400 master) into a 400-900 multi-master font."""
+    """Expand ``font`` (single 400 master) into a 400-700 multi-master font."""
     m0 = font.masters[0]
     metrics = _master_metrics(font)
 
-    m0.axes = [BASE, 100]
+    font.axes = [a for a in font.axes if a.axisTag == "wght"]
+    m0.axes = [BASE]
     m0.weight = WEIGHT_CLASS[BASE]
     base_id = m0.id
 
@@ -254,7 +255,7 @@ def add_weights(font, is_italic=False):
         nm.id = f"m{w}"
         nm.weight = WEIGHT_CLASS[w]
         nm.width = m0.width
-        nm.axes = [w, 100]
+        nm.axes = [w]
         nm.visible = m0.visible
         nm._customParameters = copy.deepcopy(list(m0._customParameters))
         nm.metrics = copy.deepcopy(list(m0.metrics))
@@ -286,15 +287,16 @@ def add_weights(font, is_italic=False):
 
     inst = list(font.instances)
     for i in inst:
-        i.axes = [BASE, 100]
+        i.axes = [BASE]
         i.isItalic = is_italic
+        i.name = "Italic" if is_italic else "Regular"
     for w in sorted(WEIGHTS):
         if w == BASE:
             continue
         i = gs.GSInstance()
         i.weight = WEIGHT_CLASS[w]
-        i.name = WEIGHTS[w]
-        i.axes = [w, 100]
+        i.name = f"{WEIGHTS[w]} Italic" if is_italic else WEIGHTS[w]
+        i.axes = [w]
         i.isBold = w == 700
         i.isItalic = is_italic
         inst.append(i)
