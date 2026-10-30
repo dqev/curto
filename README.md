@@ -21,6 +21,10 @@ Italic, with static and variable (`wght`) builds. It covers the Google Fonts
 Latin Core glyphset, including the Latin Extended, punctuation, symbols, and
 currency characters needed for broad Latin-script typography.
 
+<p align="center">
+  <img src="documentation/showcase.png" alt="Curto Serif showcase" width="600">
+</p>
+
 ## Download
 
 - [**CurtoSerif-1.001-beta.zip**](releases/CurtoSerif-1.001-beta.zip) — current family. Weights 400–700, Roman and Italic, static + variable.
