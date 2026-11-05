@@ -1,6 +1,6 @@
-# Curto Serif — 1.001 beta (multiple weights + variable)
+# Curto Serif — 1.001 (multiple weights + variable)
 
-This folder is a **self-contained beta**. Nothing here touches the shipped
+This folder is a **self-contained release**. Nothing here touches the shipped
 `src/` sources or the `CurtoSerif-1.000` release.
 
 ## What's inside
@@ -13,7 +13,7 @@ This folder is a **self-contained beta**. Nothing here touches the shipped
 | `fonts/otf/` | 8 static OTFs |
 | `fonts/webfonts/` | WOFF2 for every TTF, including the variable fonts |
 | `curto.css` | Web stylesheet (static faces + variable faces) |
-| `CurtoSerif-1.001-beta.zip` | Download bundle (fonts, CSS, license) |
+| `CurtoSerif-1.001.zip` | Download bundle (fonts, CSS, license) |
 
 ## Weights
 

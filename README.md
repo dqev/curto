@@ -9,10 +9,8 @@
 <p align="center">A refined, contemporary serif typeface for editorial elegance, titles, and bold brand identities.</p>
 
 <p align="center">
-  <a href="https://devchauhan.in/curto"><picture><source media="(prefers-color-scheme: dark)" srcset="documentation/pill-live-light.svg"><img src="documentation/pill-live-dark.svg" alt="Live" height="34"></picture></a>
   <a href="#download"><picture><source media="(prefers-color-scheme: dark)" srcset="documentation/pill-download-light.svg"><img src="documentation/pill-download-dark.svg" alt="Download" height="34"></picture></a>
   <a href="https://github.com/dqev/curto/releases"><picture><source media="(prefers-color-scheme: dark)" srcset="documentation/pill-release-light.svg"><img src="documentation/pill-release-dark.svg" alt="Release" height="34"></picture></a>
-  <a href="https://devchauhan.in/curto"><picture><source media="(prefers-color-scheme: dark)" srcset="documentation/pill-beta-light.svg"><img src="documentation/pill-beta-dark.svg" alt="Beta" height="34"></picture></a>
 </p>
 
 Curto Serif is a contemporary text and display serif with a high-contrast,
@@ -27,10 +25,11 @@ currency characters needed for broad Latin-script typography.
 
 ## Download
 
-- [**CurtoSerif-1.001-beta.zip**](releases/CurtoSerif-1.001-beta.zip) — current family. Weights 400–700, Roman and Italic, static + variable.
+- [**CurtoSerif-1.001.zip**](releases/CurtoSerif-1.001.zip) — current family. Weights 400–700, Roman and Italic, static + variable.
 - [**CurtoSerif-1.000.zip**](releases/CurtoSerif-1.000.zip) — first release. Weight 400, Roman and Italic.
 
 All releases are also on the [Releases page](https://github.com/dqev/curto/releases).
+There is no live demo or web specimen available yet.
 
 ## Weights and formats
 
@@ -117,7 +116,6 @@ the [GitHub Releases page](https://github.com/dqev/curto/releases).
 ├── README.md
 ├── Makefile
 ├── curto.css
-├── demo/                 # browser specimen
 ├── documentation/        # article, images, social assets, release notes
 ├── fonts/
 │   ├── otf/
